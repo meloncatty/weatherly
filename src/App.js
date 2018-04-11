@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Search from './Search.js'
 import CurrentWeather from './CurrentWeather.js'
+import SevenHour from './SevenHour.js'
 import data from './mockData.js'
 import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
 
@@ -15,7 +16,10 @@ class App extends Component {
       currCondition: '',
       currTemp: '',
       currHigh: '',
-      currLow: ''
+      currLow: '',
+      hourOfDay: '',
+      hourlyImg: '',
+      hourlyTemp: ''
     }
   }
 
@@ -27,7 +31,6 @@ class App extends Component {
       currTemp: getCurrTemp(data),
       currHigh: getCurrHigh(data),
       currLow: getCurrLow(data)
-      weatherImg:
     })
   }
 
@@ -43,6 +46,7 @@ class App extends Component {
         currHigh= {this.state.currHigh}
         currLow= {this.state.currLow}
         />
+        <SevenHour />
       </div>
     )
   }

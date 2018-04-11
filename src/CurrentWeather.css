@@ -1,8 +1,9 @@
 .curr-weather-div {
   background: #fff;
-  height: 400px;
-  width: 600px;
-  margin-left: 425px;
+  height: 200px;
+  width: 705px;
+  display: flex;
+  flex-direction: column;
 }
 
 .curr-weather-location {

@@ -3,16 +3,15 @@ import './CurrentWeather.css'
 
 class CurrentWeather extends Component {
   constructor(props) {
-    super(props)
+    super()
 
   }
   render() {
-    console.log(this.props)
   return (
     <div className="curr-weather-div">
       <h2 className="curr-weather-location">{this.props.currLocation}</h2>
-      <button className="forecast-button">7-Hour Forecast</button>
-      <button className="forecast-button">10-Day Forecast</button>
+
+      
       <div className="curr-weather-temp">
         <h3 className ="curr-weather-date">{this.props.currDate}</h3>
         <h3>{this.props.currCondition}</h3>
