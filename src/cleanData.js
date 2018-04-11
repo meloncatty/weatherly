@@ -1,8 +1,7 @@
 import React from 'react'
 
 const getCurrLocation = (data) => {
-  const {full} = data.current_observation.display_location
-  return full
+  return data.current_observation.display_location.full
 }
 
 const getCurrDate = (data) => {
@@ -10,11 +9,20 @@ const getCurrDate = (data) => {
   return pretty.split(' ').slice(4).join(' ')
 }
 
-
 const getCurrCondition = (data) => {
-  const {conditions} = data.forecast.simpleforecast.forecastday[0]
-  return conditions
+  return data.forecast.simpleforecast.forecastday[0].conditions
 }
 
+const getCurrHigh = (data) => {
+  return data.forecast.txt_forecast.forecastday[0].fcttext
+}
 
-export {getCurrLocation, getCurrDate, getCurrCondition}
+const getCurrLow = (data) => {
+  return data.forecast.txt_forecast.forecastday[1].fcttext
+}
+
+const getCurrTemp = (data) => {
+  return data.current_observation.temperature_string
+}
+
+export {getCurrLocation, getCurrDate, getCurrCondition, getCurrHigh, getCurrLow, getCurrTemp}

@@ -3,7 +3,7 @@ import './App.css'
 import Search from './Search.js'
 import CurrentWeather from './CurrentWeather.js'
 import data from './mockData.js'
-import {getCurrLocation, getCurrDate, getCurrCondition} from './cleanData.js'
+import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
 
 class App extends Component {
   constructor() {
@@ -13,6 +13,9 @@ class App extends Component {
       currLocation: '',
       currDate: '',
       currCondition: '',
+      currTemp: '',
+      currHigh: '',
+      currLow: ''
     }
   }
 
@@ -20,7 +23,11 @@ class App extends Component {
     this.setState({
       currLocation: getCurrLocation(data),
       currDate: getCurrDate(data),
-      currCondition: getCurrCondition(data)
+      currCondition: getCurrCondition(data),
+      currTemp: getCurrTemp(data),
+      currHigh: getCurrHigh(data),
+      currLow: getCurrLow(data)
+      weatherImg:
     })
   }
 
@@ -32,6 +39,9 @@ class App extends Component {
         currLocation= {this.state.currLocation}
         currDate= {this.state.currDate}
         currCondition = {this.state.currCondition}
+        currTemp = {this.state.currTemp}
+        currHigh= {this.state.currHigh}
+        currLow= {this.state.currLow}
         />
       </div>
     )
