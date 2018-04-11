@@ -5,9 +5,6 @@ class CurrentWeather extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-
-    }
   }
   render() {
     console.log(this.props)
@@ -19,10 +16,10 @@ class CurrentWeather extends Component {
       <div className="curr-weather-temp">
         <h3 className ="curr-weather-date">{this.props.currDate}</h3>
         <h3>{this.props.currCondition}</h3>
-        <h3>74 Degrees</h3>
+        <h3>{this.props.currTemp}</h3>
       </div>
-      <p>High of 80 degrees, low of 65 degrees</p>
-      <p>Today is partly cloudy, 50% chance rain in afternoon.</p>
+      <p>{this.props.currHigh}</p>
+      <p>{this.props.currLow}</p>
     </div>
   )
 }
