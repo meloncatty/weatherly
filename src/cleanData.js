@@ -1,5 +1,3 @@
-import React from 'react'
-
 const getCurrLocation = (data) => {
   return data.current_observation.display_location.full
 }
