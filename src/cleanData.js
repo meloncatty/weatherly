@@ -10,4 +10,11 @@ const getCurrDate = (data) => {
   return pretty.split(' ').slice(4).join(' ')
 }
 
-export {getCurrLocation, getCurrDate}
+
+const getCurrCondition = (data) => {
+  const {conditions} = data.forecast.simpleforecast.forecastday[0]
+  return conditions
+}
+
+
+export {getCurrLocation, getCurrDate, getCurrCondition}

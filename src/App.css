@@ -4,7 +4,8 @@
 
 h1 {
   font-family: 'Kalam', cursive;
-  font-size: 48px;
+  font-size: 60px;
+  color: #fff
 }
 
 @keyframes App-logo-spin {
