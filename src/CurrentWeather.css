@@ -1,6 +1,38 @@
-.curr-weather {
+.curr-weather-div {
   background: #fff;
-  height: 300px;
-  width: 300px;
-  margin-left: 500px;
+  height: 400px;
+  width: 600px;
+  margin-left: 425px;
+}
+
+.curr-weather-location {
+  background-color: #42437C;
+  color: #fff;
+  height: 50px;
+  margin: 0px;
+  padding-top: 15px;
+}
+
+.curr-weather-temp {
+  /* background-color: #42437C;
+  color: #fff; */
+
+  height: 100px;
+}
+
+.curr-weather-date{
+  margin:0;
+}
+
+.forecast-button {
+  background: none;
+  border: 1px solid #42437C;
+  color: #42437C;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.forecast-button:hover{
+  background-color: #42437C;
+  color: #fff;
 }

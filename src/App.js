@@ -3,7 +3,7 @@ import './App.css'
 import Search from './Search.js'
 import CurrentWeather from './CurrentWeather.js'
 import data from './mockData.js'
-import {getCurrLocation, getCurrDate} from './cleanData.js'
+import {getCurrLocation, getCurrDate, getCurrCondition} from './cleanData.js'
 
 class App extends Component {
   constructor() {
@@ -11,14 +11,16 @@ class App extends Component {
 
     this.state = {
       currLocation: '',
-      currDate: ''
+      currDate: '',
+      currCondition: '',
     }
   }
 
   componentDidMount() {
     this.setState({
       currLocation: getCurrLocation(data),
-      currDate: getCurrDate(data)
+      currDate: getCurrDate(data),
+      currCondition: getCurrCondition(data)
     })
   }
 
@@ -29,6 +31,7 @@ class App extends Component {
         <CurrentWeather
         currLocation= {this.state.currLocation}
         currDate= {this.state.currDate}
+        currCondition = {this.state.currCondition}
         />
       </div>
     )
