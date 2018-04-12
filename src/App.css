@@ -8,9 +8,17 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  font-family: 'NTR', sans-serif;
 }
+
+.flex-right {
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+
+
 
 h1 {
   font-family: 'Kalam', cursive;

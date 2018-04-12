@@ -38,7 +38,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Weatherly</h1>
+      <div className="flex-left">
+      <h1>Weatherly</h1>
         <CurrentWeather
         currLocation= {this.state.currLocation}
         currDate= {this.state.currDate}
@@ -48,7 +49,10 @@ class App extends Component {
         currLow= {this.state.currLow}
         />
         <SevenHour />
+        </div>
+        <div className="flex-right">
         <TenDay />
+        </div>
       </div>
     )
   }
