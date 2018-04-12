@@ -2,7 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-attachment: fixed;
   background-image: url(./assets/landscape.jpg);
   background-size: cover;
-  background-attachment: fixed;
+}
+
+div#root {
+  background: rgba(0, 54, 100, 0.5);
 }
