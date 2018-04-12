@@ -1,5 +1,23 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.curr-weather-condition {
+  display: inline-block;
+  flex-direction: column;
+  width: 49%;
+}
+
+.curr-weather-data-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .curr-weather-div {
   background: #fff;
+  display: flex;
+  flex-direction: row;
   height: 200px;
   width: 705px;
   display: flex;
@@ -15,25 +33,16 @@
 }
 
 .curr-weather-temp {
-  /* background-color: #42437C;
-  color: #fff; */
-
+  background-color: #9D93D0;
+  display:inline-block;
+  /* display: flex; */
+  /* flex-direction: column; */
+  color: #fff;
   height: 100px;
+  width: 49%;
 }
 
 .curr-weather-date{
   margin:0;
 }
 
-.forecast-button {
-  background: none;
-  border: 1px solid #42437C;
-  color: #42437C;
-  height: 30px;
-  margin-top: 10px;
-}
-
-.forecast-button:hover{
-  background-color: #42437C;
-  color: #fff;
-}

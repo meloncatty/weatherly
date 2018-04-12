@@ -1,0 +1,12 @@
+.day-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.day-card {
+    background-color: #fff;
+    height: 150px;
+    width: 100px;
+    margin-right: 20px;
+}

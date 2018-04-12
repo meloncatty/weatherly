@@ -3,6 +3,7 @@ import './App.css'
 import Search from './Search.js'
 import CurrentWeather from './CurrentWeather.js'
 import SevenHour from './SevenHour.js'
+import TenDay from './TenDay.js'
 import data from './mockData.js'
 import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
 
@@ -47,6 +48,7 @@ class App extends Component {
         currLow= {this.state.currLow}
         />
         <SevenHour />
+        <TenDay />
       </div>
     )
   }
