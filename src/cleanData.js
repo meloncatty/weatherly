@@ -12,15 +12,22 @@ const getCurrCondition = (data) => {
 }
 
 const getCurrHigh = (data) => {
-  return data.forecast.txt_forecast.forecastday[0].fcttext
+  const {fcttext} = data.forecast.txt_forecast.forecastday[0]
+  return fcttext.split(' ').slice(0, 6).join(' ')
 }
 
 const getCurrLow = (data) => {
-  return data.forecast.txt_forecast.forecastday[1].fcttext
+  const {fcttext} = data.forecast.txt_forecast.forecastday[1]
+  return fcttext.split(' ').slice(0, 4).join(' ')
 }
 
 const getCurrTemp = (data) => {
   return data.current_observation.temperature_string
 }
 
-export {getCurrLocation, getCurrDate, getCurrCondition, getCurrHigh, getCurrLow, getCurrTemp}
+export {getCurrLocation,
+        getCurrDate,
+        getCurrCondition,
+        getCurrHigh,
+        getCurrLow,
+        getCurrTemp}
