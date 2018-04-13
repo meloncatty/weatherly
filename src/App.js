@@ -5,7 +5,7 @@ import CurrentWeather from './CurrentWeather.js'
 import SevenHour from './SevenHour.js'
 import TenDay from './TenDay.js'
 import weatherData from './weatherData.js'
-// import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
+import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
 
 class App extends Component {
   constructor() {
@@ -32,7 +32,23 @@ class App extends Component {
 
   getWeather(location) {
     return weatherData(location)
-      .then(data => console.log(data))
+      .then(data => {
+        console.log(data)
+        let currLocation = getCurrLocation(data)
+        let currDate = getCurrDate(data)
+        let currCondition = getCurrCondition(data)
+        let currTemp = getCurrTemp(data)
+        let currHigh = getCurrHigh(data)
+        let currLow = getCurrLow(data)
+        this.setState({
+          currLocation: currLocation,
+          currDate: currDate,
+          currCondition: currCondition,
+          currTemp: currTemp,
+          currHigh: currHigh,
+          currLow: currLow
+        })
+      })
       .catch(err => 'Location not found')
   }
   render() {
