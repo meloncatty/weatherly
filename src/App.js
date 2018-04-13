@@ -4,8 +4,8 @@ import Search from './Search.js'
 import CurrentWeather from './CurrentWeather.js'
 import SevenHour from './SevenHour.js'
 import TenDay from './TenDay.js'
-import data from './mockData.js'
-import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
+import weatherData from './weatherData.js'
+// import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
 
 class App extends Component {
   constructor() {
@@ -22,19 +22,19 @@ class App extends Component {
       hourlyImg: '',
       hourlyTemp: ''
     }
+
+    this.getWeather = this.getWeather.bind(this)
   }
 
   componentDidMount() {
-    this.setState({
-      currLocation: getCurrLocation(data),
-      currDate: getCurrDate(data),
-      currCondition: getCurrCondition(data),
-      currTemp: getCurrTemp(data),
-      currHigh: getCurrHigh(data),
-      currLow: getCurrLow(data)
-    })
+    this.getWeather('Denver')
   }
 
+  getWeather(location) {
+    return weatherData(location)
+      .then(data => console.log(data))
+      .catch(err => 'Location not found')
+  }
   render() {
     return (
       <div className="App">
