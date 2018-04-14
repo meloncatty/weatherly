@@ -1,53 +1,20 @@
 import React, {Component} from 'react'
 import './HourCard.css'
 
-class SevenHour extends Component {
-  constructor(props) {
-    super()
-
-  }
-
-  render() {
-    return(
-      <section className="hour-container">
-        <div className="hour-card">
-          <h4 className="hour-of-day">1PM</h4>
-          <h5 className="image-desc">I'm an image</h5>
-          <h4 className="hour-temp">60°</h4>
-        </div>
-        <div className="hour-card">
-          <h4 className="hour-of-day">1PM</h4>
-          <h5 className="image-desc">I'm an image</h5>
-          <h4 className="hour-temp">60°</h4>
-        </div>
-        <div className="hour-card">
-          <h4 className="hour-of-day">1PM</h4>
-          <h5 className="image-desc">I'm an image</h5>
-          <h4 className="hour-temp">60°</h4>
-        </div>
-        <div className="hour-card">
-          <h4 className="hour-of-day">1PM</h4>
-          <h5 className="image-desc">I'm an image</h5>
-          <h4 className="hour-temp">60°</h4>
-        </div>
-        <div className="hour-card">
-          <h4 className="hour-of-day">1PM</h4>
-          <h5 className="image-desc">I'm an image</h5>
-          <h4 className="hour-temp">60°</h4>
-        </div>
-        <div className="hour-card">
-          <h4 className="hour-of-day">1PM</h4>
-          <h5 className="image-desc">I'm an image</h5>
-          <h4 className="hour-temp">60°</h4>
-        </div>
-        <div className="hour-card last-card">
-          <h4 className="hour-of-day">1PM</h4>
-          <h5 className="image-desc">I'm an image</h5>
-          <h4 className="hour-temp">60°</h4>
-        </div>
+export default function drawSevenHourCards(props) {
+  // console.log(hourData)
+  const hours = props.hourData.map(object => {
+    return (
+            <div className="hour-card">
+              <h4 className="hour-of-day">{object.hours}</h4>
+              <h5 className="image-desc">I'm an image</h5>
+              <h4 className="hour-temp">60°</h4>
+            </div>
+          )
+        })
+    return (
+     <section className="hour-container">
+       {hours}
       </section>
     )
-  }
 }
-
-export default SevenHour
