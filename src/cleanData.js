@@ -18,7 +18,7 @@ const getCurrHigh = (data) => {
 
 const getCurrLow = (data) => {
   const {fcttext} = data.forecast.txt_forecast.forecastday[1]
-  return fcttext.split(' ').slice(0, 4).join(' ')
+  return fcttext.split(' ').slice(0, 7).join(' ')
 }
 
 const getCurrTemp = (data) => {
