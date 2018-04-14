@@ -5,7 +5,7 @@ import CurrentWeather from './CurrentWeather.js'
 import SevenHour from './SevenHour.js'
 import TenDay from './TenDay.js'
 import weatherData from './weatherData.js'
-import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow} from './cleanData.js'
+import {getCurrLocation, getCurrDate, getCurrCondition, getCurrTemp,  getCurrHigh, getCurrLow, getHourData} from './cleanData.js'
 
 class App extends Component {
   constructor() {
@@ -20,7 +20,8 @@ class App extends Component {
       currLow: '',
       hourOfDay: '',
       hourlyImg: '',
-      hourlyTemp: ''
+      hourlyTemp: '',
+      hourData: []
     }
 
     this.getWeather = this.getWeather.bind(this)
@@ -40,13 +41,15 @@ class App extends Component {
         let currTemp = getCurrTemp(data)
         let currHigh = getCurrHigh(data)
         let currLow = getCurrLow(data)
+        let hourData = getHourData(data)
         this.setState({
           currLocation: currLocation,
           currDate: currDate,
           currCondition: currCondition,
           currTemp: currTemp,
           currHigh: currHigh,
-          currLow: currLow
+          currLow: currLow,
+          hourData: hourData 
         })
       })
       .catch(err => 'Location not found')
@@ -64,7 +67,9 @@ class App extends Component {
         currHigh= {this.state.currHigh}
         currLow= {this.state.currLow}
         />
-        <SevenHour />
+        {this.state.hourData && <SevenHour 
+        hourData = {this.state.hourData}
+        />}
         </div>
         <div className="flex-right">
         <TenDay />
