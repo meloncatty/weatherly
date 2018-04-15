@@ -1,8 +1,13 @@
 .hour-card {
-  width: 80px;
-  height: 100px;
-  margin: 10px;
+  width: 25%;
   background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour-card:nth-child(-n+6){
   border-right: 1px solid #42437C;
 }
 
@@ -11,23 +16,10 @@
   color: #42437C;
   display: flex;
   text-align: center;
+  width: 780px;
+  height: 160px;
 }
 
-.image-desc {
-  position: relative;
-  bottom: 30px;
-}
-
-.hour-of-day{
-  position: relative;
-  bottom: 20px;
-}
-
-.hour-temp {
-  position: relative;
-  bottom: 30px;
-}
-
-.last-card {
-  border-color: #fff;
+.hour-img {
+  width: 40%;
 }

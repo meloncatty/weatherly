@@ -15,7 +15,6 @@ class App extends Component {
       location: 'Denver',
       cleanData: null
     }
-
     this.getWeather = this.getWeather.bind(this)
   }
 
@@ -36,13 +35,12 @@ class App extends Component {
   render() {
     console.log(cleanData)
     return (
-      this.state.cleanData && 
+      this.state.cleanData &&
       <div className="App">
          <h1>Weatherly</h1>
          <CurrentWeather cleanData = {this.state.cleanData}/>
-        <SevenHour cleanData = {this.state.cleanData}/>
-      
-        <TenDay />
+         <SevenHour cleanData = {this.state.cleanData}/>
+         <TenDay cleanData = {this.state.cleanData}/>
       </div>
     )
   }
