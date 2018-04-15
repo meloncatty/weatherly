@@ -5,14 +5,15 @@ import SevenHour from './SevenHour.js'
 import TenDay from './TenDay.js'
 import weatherData from './weatherData.js'
 import cleanData from './cleanData.js'
-import CurrentWeather from './CurrentWeather';
+import CurrentWeather from './CurrentWeather'
+
 
 class App extends Component {
   constructor() {
     super()
 
     this.state = {
-      location: 'Denver',
+      location:'Denver, CO',
       cleanData: null
     }
     this.getWeather = this.getWeather.bind(this)
@@ -23,7 +24,8 @@ class App extends Component {
   }
 
   getWeather(location) {
-   weatherData(location)
+  let searchWord = location.split(',')
+   weatherData(searchWord)
       .then(data => {
         console.log(data)
         this.setState({
@@ -37,6 +39,7 @@ class App extends Component {
     return (
       this.state.cleanData &&
       <div className="App">
+        <Search getWeather = {this.getWeather}/>
          <h1>Weatherly</h1>
          <CurrentWeather cleanData = {this.state.cleanData}/>
          <SevenHour cleanData = {this.state.cleanData}/>
