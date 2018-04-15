@@ -1,23 +1,23 @@
 .day-container {
-font-family: 'NTR', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    margin-top: 20px;
+  font-family: 'NTR', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-top: 20px;
 }
 
 .day-card {
-    margin: 20px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 150px;
-    border: 1px solid #fff;
-    background: rgba(70, 0, 154, 0.5);
+  margin: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  border: 1px solid #fff;
+  background: rgba(70, 0, 154, 0.5);
 }
 
 .day-date {

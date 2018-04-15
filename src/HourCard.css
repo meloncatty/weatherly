@@ -11,6 +11,8 @@
   color: #42437C;
   display: flex;
   text-align: center;
+  height: 140px;
+  width: 65%;
 }
 
 .image-desc {
