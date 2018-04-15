@@ -23,6 +23,7 @@ export default function cleanData(data) {
     tenDay: data.forecast.simpleforecast.forecastday.map((day) => {
       return {
         day: day.date.day,
+        month: day.date.monthname,
         currentHigh: day.high.fahrenheit,
         currentLow: day.low.fahrenheit,
         currentImage: day.icon_url

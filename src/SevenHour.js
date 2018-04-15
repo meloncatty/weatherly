@@ -8,7 +8,7 @@ export default function SevenHour(props) {
         return (
           <section className="hour-card">
             <h4 className="hour-of-day">{object.hours}</h4>
-            <img alt="current weather condition"className="image-desc" src= {object.images}/>
+            <img alt="current weather condition"className="hour-img" src= {object.images}/>
             <h4 className="hour-temp">{object.temps}</h4>
           </section>
         )

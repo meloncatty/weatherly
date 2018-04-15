@@ -15,7 +15,6 @@ class App extends Component {
       location: 'Denver',
       cleanData: null
     }
-
     this.getWeather = this.getWeather.bind(this)
   }
 
