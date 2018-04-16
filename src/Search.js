@@ -36,7 +36,7 @@ class Search extends Component {
           }
         </select>
         <button className="submit"
-                submit={(event) => {
+                onClick={(event) => {
                   event.preventDefault()
                   this.props.getWeather(this.state.searchInput)
                 }}
