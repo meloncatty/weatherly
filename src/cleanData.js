@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function cleanData(data) {
   const cleanData = {
     currentWeather: {
