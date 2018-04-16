@@ -1,0 +1,24 @@
+.submit-button {
+   background: #fff;
+   border:none;
+   margin: none;
+   height: 40px;
+   width: 60px;
+   }
+
+.search-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    background-color: #1c92d2;
+}
+
+.search-input {
+    height: 40px;
+    width: 200px;
+} 
+
+.submit-div {
+    margin-left: 81.8%;
+}
