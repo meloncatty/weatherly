@@ -16,12 +16,14 @@ class Search extends Component {
 
   render() {
     return (
-      <div className="search-div">
+      <div className="search-container">
         <input
-          className="search-input"
-          type='text'
+          className="city"
+          type='search'
+          list='cities'
           value={this.state.searchInput}
           onChange={(event) => {
+            event.preventDefault()
             this.setState({
               searchInput: event.target.value,
               suggestCities: trie.suggest(event.target.value)
@@ -29,14 +31,13 @@ class Search extends Component {
           }}
         />
          <datalist
-          className="search-input"
+          className="cities"
         >
-          {
+          {   this.state.suggestCities &&
               this.state.suggestCities.map((city, index)=> {
             return <option key={index} value={city}/>
           })
           }
-
         </datalist>
         <button className="submit-button"
                 onClick={(event) => {
