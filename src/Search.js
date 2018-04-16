@@ -19,7 +19,7 @@ class Search extends Component {
       <div className="search-container">
         <input
           className="city"
-          type='search'
+          type='text'
           list='cities'
           value={this.state.searchInput}
           onChange={(event) => {

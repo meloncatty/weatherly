@@ -9,8 +9,9 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -18,3 +19,8 @@ h1 {
   font-size: 60px;
   color: #fff
 }
+
+/* .welcome-screen {
+
+} */
+

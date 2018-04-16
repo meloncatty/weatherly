@@ -14,7 +14,6 @@ export default function CurrentWeather(props){
       <div className="curr-right">
         <p className="day-summary">{props.cleanData.currentWeather.summary}</p>
         <h3 className="day-high-low">High {props.cleanData.currentWeather.currentHigh}° Low {props.cleanData.currentWeather.currentLow}°</h3>
-        {/* <p>Low of {props.cleanData.currentWeather.currentLow}°</p> */}
       </div>
     </div>
   </section>

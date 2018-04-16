@@ -6,6 +6,8 @@ import TenDay from './TenDay.js'
 import weatherData from './weatherData.js'
 import cleanData from './cleanData.js'
 import CurrentWeather from './CurrentWeather'
+import Welcome from './Welcome'
+import Header from './Header'
 
 
 class App extends Component {
@@ -13,7 +15,7 @@ class App extends Component {
     super()
 
     this.state = {
-      location:'Denver, CO',
+      location:'',
       cleanData: null
     }
     this.getWeather = this.getWeather.bind(this)
@@ -33,16 +35,34 @@ class App extends Component {
       })
       .catch(err => 'Location not found')
   }
+
   render() {
     return (
-      this.state.cleanData &&
+      
+      
       <div className="App">
-        <Search getWeather = {this.getWeather}/>
-         <h1>Weatherly</h1>
-         <CurrentWeather cleanData = {this.state.cleanData}/>
-         <SevenHour cleanData = {this.state.cleanData}/>
-         <TenDay cleanData = {this.state.cleanData}/>
-      </div>
+        
+       
+       
+        {!this.state.cleanData &&
+         <div className="welcome-screen">
+         <Header />
+          <Welcome location = {this.state.location} 
+          getWeather ={this.getWeather}/>
+          </div>
+        }
+        
+        {this.state.cleanData && 
+        <div>
+          <Header />
+          <Search getWeather = {this.getWeather}/>
+          <CurrentWeather cleanData = {this.state.cleanData}/>
+          <SevenHour cleanData = {this.state.cleanData}/>
+          <TenDay cleanData = {this.state.cleanData}/>
+          
+         </div>
+         }
+         </div>
     )
   }
 }
