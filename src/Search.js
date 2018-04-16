@@ -23,15 +23,16 @@ class Search extends Component {
           list='cities'
           value={this.state.searchInput}
           onChange={(event) => {
+            const suggestions = trie.suggest(event.target.value.toUpperCase())
             event.preventDefault()
             this.setState({
               searchInput: event.target.value,
-              suggestCities: trie.suggest(event.target.value)
+              suggestCities: suggestions
             })
           }}
         />
          <datalist
-          className="cities"
+          id="cities"
         >
           {   this.state.suggestCities &&
               this.state.suggestCities.map((city, index)=> {

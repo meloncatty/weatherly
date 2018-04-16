@@ -17,9 +17,7 @@
   background: #1c92d2;
   display: flex;
   flex-direction: column;
-  /* width: 780px; */
-  height: 300px;
-  margin-right: 400px;
+  width: 100%;
 }
 
 .curr-date {
