@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: 930px;
 }
 
 h1 {
@@ -20,7 +20,27 @@ h1 {
   color: #fff
 }
 
+.weather-data {
+  display: flex;
+  width: 100%;
+}
+
+.day-data {
+  width: 50%;
+}
+
+.curr-hour-data {
+  width: 50%;
+}
+
+.main-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* .welcome-screen {
 
 } */
-

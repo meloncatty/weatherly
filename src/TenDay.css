@@ -10,19 +10,14 @@ h4 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  margin-top: 20px;
+  width: 50%;
 }
 
 .day-card {
   height: auto;
   display: flex;
   flex-direction: row;
-  padding-left: 20px;
-  position: relative;
-  left: 500px;
-  bottom: 477px;
-  width: 400px;
+  width: 70%;
   height: 50px;
   border: 1px solid #fff;
   background:#1c92d2;
