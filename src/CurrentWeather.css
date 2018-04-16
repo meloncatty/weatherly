@@ -14,15 +14,17 @@
 }
 
 .curr-container {
-  background: #9D93D0;
+  background: #1c92d2;
   display: flex;
   flex-direction: column;
   width: 780px;
   height: 300px;
+  margin-right: 400px;
 }
 
 .curr-date {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  font-size: 28px;
 }
 
 .curr-data {
@@ -32,7 +34,7 @@
 }
 
 .curr-location {
-  background-color: #42437C;
+  background-color:#00BFFF;
   color: #fff;
   height: 50px;
   margin: 0px;
@@ -44,7 +46,8 @@
 }
 
 .curr-left {
-  background-color: #9D93D0;
+  background-color: #1c92d2;
+  border-right: 1px solid white;
   color: #fff;
   width: 50%;
   display: flex;
@@ -52,4 +55,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+}
+
+
+
+.day-img {
+  height: 100px;
+  width: 100px;
+}
+
+.day-summary {
+  bottom: 9px;
+  font-size: 28px;
+  margin: 34px 50px;
+  position: relative;
 }
