@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import trie from './locationTrie.js'
 import './Search.css'
 
 
@@ -8,45 +9,41 @@ class Search extends Component {
 
     this.state = {
       searchInput : '',
-      suggestCities: []
+      suggestCities: [],
+
     }
   }
 
   render() {
     return (
       <div className="search-div">
-        <div className="submit-div">
         <input
           className="search-input"
           type='text'
           value={this.state.searchInput}
           onChange={(event) => {
             this.setState({
-              searchInput: event.target.value
+              searchInput: event.target.value,
+              suggestCities: trie.suggest(event.target.value)
             })
           }}
         />
-        {/* <select
-        className="search-input"
-          value={this.state.suggestCities}
-          onChange={(event) => {
-            this.setState({
-              searchInput: event.target.value
-            })
-          }}
-        >  */}
-          {/* {this.state.suggestCities.map((city, index)=> {
-            return <option key={index} value={city}>{city}</option>
+         <datalist
+          className="search-input"
+        >
+          {
+              this.state.suggestCities.map((city, index)=> {
+            return <option key={index} value={city}/>
           })
           }
-        </select> */}
+
+        </datalist>
         <button className="submit-button"
                 onClick={(event) => {
                   event.preventDefault()
                   this.props.getWeather(this.state.searchInput)
                 }}
         > submit</button>
-        </div>
       </div>
     )
   }

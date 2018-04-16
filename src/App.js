@@ -27,7 +27,6 @@ class App extends Component {
   let searchWord = location.split(',')
    weatherData(searchWord)
       .then(data => {
-        console.log(data)
         this.setState({
          cleanData: cleanData(data)
         })
@@ -35,7 +34,6 @@ class App extends Component {
       .catch(err => 'Location not found')
   }
   render() {
-    console.log(cleanData)
     return (
       this.state.cleanData &&
       <div className="App">
