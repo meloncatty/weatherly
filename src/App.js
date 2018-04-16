@@ -38,12 +38,7 @@ class App extends Component {
 
   render() {
     return (
-
-
       <div className="App">
-
-
-
         {!this.state.cleanData &&
          <div className="welcome-screen">
          <Header />
@@ -51,7 +46,6 @@ class App extends Component {
           getWeather ={this.getWeather}/>
           </div>
         }
-
         {this.state.cleanData &&
         <div className="main-screen">
           <Header />
@@ -61,9 +55,7 @@ class App extends Component {
           <CurrentWeather cleanData = {this.state.cleanData}/>
           <SevenHour cleanData = {this.state.cleanData}/>
           </div>
-          
           <TenDay cleanData = {this.state.cleanData}/>
-
           </div>
           </div>
          }
