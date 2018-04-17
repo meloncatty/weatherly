@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import trie from './locationTrie.js'
 import './Search.css'
 
-
 class Search extends Component {
   constructor(props) {
     super(props)
@@ -31,20 +30,20 @@ class Search extends Component {
             })
           }}
         />
-         <datalist
+        <datalist
           id="cities"
         >
-          {   this.state.suggestCities &&
-              this.state.suggestCities.map((city, index)=> {
+          {this.state.suggestCities &&
+            this.state.suggestCities.map((city, index)=> {
             return <option key={index} value={city}/>
           })
           }
         </datalist>
-        <button className="submit-button"
-                onClick={(event) => {
-                  event.preventDefault()
-                  this.props.getWeather(this.state.searchInput)
-                }}
+          <button className="submit-button"
+            onClick={(event) => {
+              event.preventDefault()
+                this.props.getWeather(this.state.searchInput)
+              }}
         > submit</button>
       </div>
     )

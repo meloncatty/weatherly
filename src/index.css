@@ -1,12 +1,12 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
   background: #1c92d2;
   background: -webkit-linear-gradient(to bottom, #f2fcfe, #1c92d2);
   background: linear-gradient(to bottom, #f2fcfe, #1c92d2);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 div#root {

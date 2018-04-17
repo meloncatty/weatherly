@@ -41,10 +41,10 @@ class App extends Component {
       <div className="App">
         {!this.state.cleanData &&
          <div className="welcome-screen">
-         <Header />
+          <Header />
           <Welcome location = {this.state.location}
-          getWeather ={this.getWeather}/>
-          </div>
+              getWeather ={this.getWeather}/>
+        </div>
         }
         {this.state.cleanData &&
         <div className="main-screen">
@@ -52,14 +52,14 @@ class App extends Component {
           <Search getWeather = {this.getWeather}/>
           <div className='weather-data'>
           <div className='curr-hour-data'>
-          <CurrentWeather cleanData = {this.state.cleanData}/>
-          <SevenHour cleanData = {this.state.cleanData}/>
+            <CurrentWeather cleanData = {this.state.cleanData}/>
+            <SevenHour cleanData = {this.state.cleanData}/>
           </div>
-          <TenDay cleanData = {this.state.cleanData}/>
+            <TenDay cleanData = {this.state.cleanData}/>
           </div>
-          </div>
+        </div>
          }
-         </div>
+      </div>
     )
   }
 }

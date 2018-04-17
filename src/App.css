@@ -4,33 +4,27 @@
   box-sizing: border-box;
 }
 
-
 .App {
-  text-align: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   height: 930px;
+  justify-content: flex-start;
+  text-align: center;
 }
 
-h1 {
-  font-family: 'Kalam', cursive;
-  font-size: 60px;
-  color: #fff
-}
-
-.weather-data {
-  display: flex;
-  width: 100%;
+.curr-hour-data {
+  width: 50%;
 }
 
 .day-data {
   width: 50%;
 }
 
-.curr-hour-data {
-  width: 50%;
+h1 {
+  color: #fff;
+  font-family: 'Kalam', cursive;
+  font-size: 60px;
 }
 
 .main-screen {
@@ -39,7 +33,8 @@ h1 {
 
 }
 
+.weather-data {
+  display: flex;
+  width: 100%;
+}
 
-/* .welcome-screen {
-
-} */
