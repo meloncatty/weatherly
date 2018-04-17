@@ -1,5 +1,5 @@
 import React from 'react'
-import './CurrentWeather.css'
+import './styles/CurrentWeather.css'
 
 export default function CurrentWeather(props){
   return (

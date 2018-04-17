@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+h1 {
+  color: #F5F1E3;
+  font-family: 'Kalam', cursive;
+  font-size: 60px;
+}
+
 .App {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 930px;
-  justify-content: flex-start;
   text-align: center;
 }
 
@@ -21,20 +26,7 @@
   width: 50%;
 }
 
-h1 {
-  color: #fff;
-  font-family: 'Kalam', cursive;
-  font-size: 60px;
-}
-
-.main-screen {
-  display: flex;
-  flex-direction: column;
-
-}
-
 .weather-data {
   display: flex;
   width: 100%;
 }
-

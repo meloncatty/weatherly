@@ -60,9 +60,6 @@
   width: 100px;
 }
 
-.day-summary {
-  bottom: 9px;
-  font-size: 28px;
-  margin: 34px 50px;
-  position: relative;
+.curr-hour-data {
+  width: 65%;
 }

@@ -1,4 +1,4 @@
-import key from './apikey.js'
+import key from '../helpers/apikey.js'
 
 const root = 'http://api.wunderground.com/'
 
@@ -7,5 +7,3 @@ const weatherData = (location) => {
 }
 
 export default weatherData
-
-
