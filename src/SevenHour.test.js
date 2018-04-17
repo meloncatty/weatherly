@@ -18,4 +18,14 @@ describe('SevenHour test', () => {
     const output = shallow(<SevenHour cleanData={cleanData(mockData)}/>)
     expect(output.find('.hour-of-day').length).toEqual(7)
   })
+
+  it('should have a class for hour of the day for each card', () => {
+    const output = shallow(<SevenHour cleanData={cleanData(mockData)}/>)
+    expect(output.find('h4.hour-of-day').length).toEqual(7)
+  })
+
+  it('should have a class for the hour temp for each card', () => {
+    const output = shallow(<SevenHour cleanData={cleanData(mockData)}/>)
+    expect(output.find('h4.hour-temp').length).toEqual(7)
+  })
 })
