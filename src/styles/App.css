@@ -7,26 +7,32 @@
 h1 {
   color: #F5F1E3;
   font-family: 'Kalam', cursive;
-  font-size: 60px;
+  font-size: 100px;
 }
 
 .App {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 930px;
   text-align: center;
+  height: 100vh;
 }
 
 .curr-hour-data {
-  width: 50%;
-}
-
-.day-data {
-  width: 50%;
+  width: 95%;
+  margin-right: 20px;
 }
 
 .weather-data {
   display: flex;
-  width: 100%;
+  /* height: 100vh; */
+  width: 95%;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-search {
+  margin-bottom: 70px;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './HourCard.css'
+import './styles/SevenHour.css'
 
 export default function SevenHour(props) {
   return (

@@ -19,6 +19,7 @@ class Search extends Component {
           className="city"
           type='text'
           list='cities'
+          placeholder='Enter a city'
           value={this.state.searchInput}
           onChange={(event) => {
             const suggestions = trie.suggest(event.target.value.toUpperCase())

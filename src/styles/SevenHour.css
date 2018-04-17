@@ -1,0 +1,17 @@
+.hour-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  background: #1C7293;
+  color: #D2DADB;
+  border-top: 2px solid #0879AD;
+}
+
+.hour-card:nth-child(-n+6){
+  border-right: 2px solid #0879AD;
+}
+
+.hour-container {
+  display: flex;
+}

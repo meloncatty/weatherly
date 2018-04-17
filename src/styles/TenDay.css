@@ -1,43 +1,24 @@
+h4 {
+  font-size: 1.2em;
+}
 
 .day-container {
+  color: #D2DADB;
   align-items: center;
-  color: #fff;
   display: flex;
   font-family: 'NTR', sans-serif;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 50%;
+  width: 35%;
 }
 
 .day-card {
-  background:#1c92d2;
-  border: 1px solid #fff;
+  background:#1C7293;
+  border: 2px solid #0879AD;
   display: flex;
   flex-direction: row;
-  height: auto;
-  height: 50px;
-  padding-left: 20px;
-  width: 70%;
-}
-
-.day-date {
-  bottom: 15px;
-  position: relative;
-}
-
-.day-image-desc {
-  height: 45px;
-  margin-left: 90px;
-  width: 50px;
-}
-
-.day-temp {
-  bottom: 15px;
-  left: 70px;
-  position: relative;
-}
-
-h4 {
-  font-size: 1.2em;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  height: 59px;
 }

@@ -17,13 +17,6 @@ input[list] {
     padding: 20px 20px 20px 20px;
 }
 
-.search-container {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .submit-button {
     background:#1C7293;
     border:none;
