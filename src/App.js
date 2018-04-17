@@ -29,6 +29,7 @@ class App extends Component {
   let searchWord = location.split(',')
    weatherData(searchWord)
       .then(data => {
+        console.log(data)
         this.setState({
          cleanData: cleanData(data)
         })

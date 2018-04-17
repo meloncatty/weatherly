@@ -21,5 +21,7 @@ describe('App test', () => {
       expect(renderedApp.state('location')).toEqual(location)
       expect(renderedApp.state('cleanData')).toEqual(cleanData)
     })
+
+
   })
 })
