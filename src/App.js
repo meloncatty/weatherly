@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import './App.css'
+import './styles/App.css'
 import Search from './Search.js'
 import SevenHour from './SevenHour.js'
 import TenDay from './TenDay.js'
-import weatherData from './weatherData.js'
-import cleanData from './cleanData.js'
+import weatherData from './helpers/weatherData.js'
+import cleanData from './helpers/cleanData.js'
 import CurrentWeather from './CurrentWeather'
 import Welcome from './Welcome'
 import Header from './Header'
@@ -41,16 +41,19 @@ class App extends Component {
     return (
       <div className="App">
         {!this.state.cleanData &&
-         <div className="welcome-screen">
+         <div className="main-search">
           <Header />
           <Welcome location = {this.state.location}
               getWeather ={this.getWeather}/>
         </div>
         }
         {this.state.cleanData &&
-        <div className="main-screen">
-          <Header />
-          <Search getWeather = {this.getWeather}/>
+          <div className='main-wrapper'>
+          <div className="main-search">
+            <Header />
+            <Search getWeather = {this.getWeather}/>
+            </div>
+
           <div className='weather-data'>
           <div className='curr-hour-data'>
             <CurrentWeather cleanData = {this.state.cleanData}/>
@@ -58,6 +61,7 @@ class App extends Component {
           </div>
             <TenDay cleanData = {this.state.cleanData}/>
           </div>
+
         </div>
          }
       </div>

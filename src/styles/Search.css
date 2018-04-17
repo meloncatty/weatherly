@@ -1,0 +1,31 @@
+.cities {
+    height: 200px;
+}
+
+.city {
+    background: none;
+    border: none;
+    border-bottom : 1px solid #fff;
+    color: #fff;
+    height: 40px;
+    width: 300px;
+}
+
+input[list] {
+    background: #D2E9FF;
+    color: #666;
+    padding: 20px 20px 20px 20px;
+}
+
+.submit-button {
+    background:#1C7293;
+    border:none;
+    color: #F5F1E3;
+    width: 60px;
+    height: 40px;
+}
+
+.submit-button:hover {
+    background-color: #F5F1E3;
+    color: #1C7293;
+}

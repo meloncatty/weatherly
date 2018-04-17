@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, configure, mount } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import App from './App';
 import Adapter from 'enzyme-adapter-react-16';
-import Welcome from './Welcome'
-import Search from './Search'
-import CurrentWeather from './CurrentWeather'
-import SevenHour from './SevenHour'
-import TenDay from './TenDay'
-
 configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
@@ -27,6 +21,8 @@ describe('App test', () => {
       expect(renderedApp.state('location')).toEqual(location)
       expect(renderedApp.state('cleanData')).toEqual(cleanData)
     })
+<<<<<<< HEAD
+=======
 
   })
 
@@ -46,26 +42,7 @@ describe('App test', () => {
       const renderedApp = mount(<App />)
       expect(renderedApp.find(Search).length).toEqual(1);
     })
+>>>>>>> master
 
-    it('should render the current weather component', () => {
-      const renderedApp = shallow(<App />)
-      const cleanData = {CurrentWeather:{location:'Denver,CO'}}
-      renderedApp.setState({cleanData:cleanData})
-      expect(renderedApp.find(CurrentWeather).length).toEqual(1);
-    })
-
-    it('should have a seven hour component', () => {
-      const renderedApp = shallow(<App />)
-      const cleanData = {SevenHour:{location:'Denver,CO'}}
-      renderedApp.setState({cleanData:cleanData})
-      expect(renderedApp.find(SevenHour).length).toEqual(1);
-    })
-
-    it('should have a ten day component', () => {
-      const renderedApp = shallow(<App />)
-      const cleanData = {TenDay:{location:'Denver,CO'}}
-      renderedApp.setState({cleanData:cleanData})
-      expect(renderedApp.find(TenDay).length).toEqual(1);
-    })
   })
 })

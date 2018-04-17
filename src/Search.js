@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import trie from './locationTrie.js'
-import './Search.css'
+import './styles/Search.css'
 
 class Search extends Component {
   constructor(props) {
@@ -8,8 +8,7 @@ class Search extends Component {
 
     this.state = {
       searchInput : '',
-      suggestCities: [],
-
+      suggestCities: []
     }
   }
 
@@ -20,6 +19,7 @@ class Search extends Component {
           className="city"
           type='text'
           list='cities'
+          placeholder='Enter a city'
           value={this.state.searchInput}
           onChange={(event) => {
             const suggestions = trie.suggest(event.target.value.toUpperCase())

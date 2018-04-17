@@ -1,0 +1,37 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #F5F1E3;
+  font-family: 'Kalam', cursive;
+  font-size: 100px;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.curr-hour-data {
+  width: 95%;
+  margin-right: 20px;
+}
+
+.weather-data {
+  display: flex;
+  width: 95%;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-search {
+  margin-bottom: 70px;
+}

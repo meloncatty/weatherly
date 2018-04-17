@@ -1,4 +1,4 @@
-import cities from './citiesArray.js'
+import cities from './helpers/citiesObject.js'
 import Trie from '../node_modules/@neko3/complete-me-last/scripts/Trie.js'
 
 let trie = new Trie()
