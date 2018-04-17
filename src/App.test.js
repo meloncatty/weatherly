@@ -27,6 +27,8 @@ describe('App test', () => {
       expect(renderedApp.state('location')).toEqual(location)
       expect(renderedApp.state('cleanData')).toEqual(cleanData)
     })
+
+
   })
 
   it('should have componentDidMount and getWeather methods', () => {
