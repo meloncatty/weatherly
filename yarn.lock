@@ -16,9 +16,9 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@neko3/complete-me-last@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@neko3/complete-me-last/-/complete-me-last-1.0.2.tgz#60a0a51c85b4a075ffc91130ea2114405c1d723d"
+"@neko3/complete-me-last@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@neko3/complete-me-last/-/complete-me-last-1.0.3.tgz#9c478c299d0950834d076d3e881dde2527cd1576"
   dependencies:
     babel "^6.23.0"
 

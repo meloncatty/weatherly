@@ -1,19 +1,19 @@
 import React from 'react'
 import './styles/SevenHour.css'
+import Card from './Card.js'
 
 export default function SevenHour(props) {
   return (
     <div className="hour-container">
-      { props.cleanData.sevenHour.map(object => {
-        return (
-          <section className="hour-card">
-            <h4 className="hour-of-day">{object.hours}</h4>
-            <img alt="current weather condition"className="hour-img" src= {object.images}/>
-            <h4 className="hour-temp">{object.temps}</h4>
-          </section>
-        )
+      { props.cleanData.sevenHour.map((object, index) => {
+        return <Card
+          key={ index }
+          hours={ object.hours}
+          image={ object.images }
+          temp={object.temps}/>
+
       })
-      }
+    }
     </div>
   )
 }

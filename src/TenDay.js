@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/TenDay.css'
+import Card from './Card'
 
 export default function SevenHour(props) {
   return (

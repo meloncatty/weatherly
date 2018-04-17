@@ -21,6 +21,28 @@ describe('App test', () => {
       expect(renderedApp.state('location')).toEqual(location)
       expect(renderedApp.state('cleanData')).toEqual(cleanData)
     })
+<<<<<<< HEAD
+=======
+
+  })
+
+  it('should have componentDidMount and getWeather methods', () => {
+    const renderedApp = shallow(<App />)
+    expect(typeof renderedApp.instance().componentDidMount).toEqual('function');
+    expect(typeof renderedApp.instance().getWeather).toEqual('function');
+  });
+
+  describe('App UI test', () => {
+    it('should render the home screen', () => {
+      const renderedApp = shallow(<App />)
+      expect(renderedApp.find(Welcome).length).toEqual(1);
+    })
+
+    it('should render the search the search functionality', () => {
+      const renderedApp = mount(<App />)
+      expect(renderedApp.find(Search).length).toEqual(1);
+    })
+>>>>>>> master
 
   })
 })
