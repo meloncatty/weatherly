@@ -1,17 +1,18 @@
 import React from 'react'
 import './TenDay.css'
+import Card from './Card'
 
 export default function SevenHour(props) {
   return (
     <div className="day-container">
       { props.cleanData.tenDay.map((object, index) => {
-        return (
-          <section  key={index} className="day-card">
-            <h4 className="day-date">{object.month} {object.day}</h4>
-            <img className="day-image-desc" alt="clear" src={object.currentImage}></img>
-            <h4 className="day-temp">{object.currentHigh}°/ {object.currentLow}° </h4>
-          </section>
-        )
+        return <Card
+          key={ index }
+          date={ object.month } 
+          day={ object.day }
+          image={ object.currentImage }
+          high={ object.currentHigh }
+          low={ object.currentLow }/>
         })
       }
     </div>
