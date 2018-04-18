@@ -4,8 +4,8 @@ import { shallow, configure, mount } from 'enzyme';
 import App from './App'
 import Adapter from 'enzyme-adapter-react-16';
 import CurrentWeather from './CurrentWeather'
-import Data from './mockData'
-import cleanData from './cleanData';
+import Data from './helpers/mockData'
+import cleanData from './helpers/cleanData';
 
 configure({ adapter: new Adapter() });
 

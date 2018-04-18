@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { shallow, configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import TenDay from './TenDay.js'
-import mockData from './mockData.js'
-import cleanData from './cleanData.js'
+import mockData from './helpers/mockData.js'
+import cleanData from './helpers/cleanData.js'
 configure({ adapter: new Adapter() });
 
 describe('TenDay test', () => {
