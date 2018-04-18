@@ -30,9 +30,7 @@ class Search extends Component {
             })
           }}
         />
-        <datalist
-          id="cities"
-        >
+        <datalist id="cities">
           {this.state.suggestCities &&
             this.state.suggestCities.map((city, index)=> {
             return <option key={index} value={city}/>
@@ -42,9 +40,9 @@ class Search extends Component {
           <button className="submit-button"
             onClick={(event) => {
               event.preventDefault()
-                this.props.getWeather(this.state.searchInput)
-              }}
-        > submit</button>
+              this.props.getWeather(this.state.searchInput)
+            }}
+          >submit</button>
       </div>
     )
   }
