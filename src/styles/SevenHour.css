@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: column;
   width: 18%;
-  background: #1C7293;
+  background: #0879AD;
   color: #D2DADB;
-  border-top: 2px solid #0879AD;
+  border-top: 2px solid #1C7293;
 }
 
 .hour-card:nth-child(-n+6){
-  border-right: 2px solid #0879AD;
+  border-right: 2px solid #1C7293;
 }
 
 .hour-container {

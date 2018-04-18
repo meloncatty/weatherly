@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, configure } from 'enzyme';
+import { shallow, configure, mount } from 'enzyme';
 import App from './App';
 import Adapter from 'enzyme-adapter-react-16';
+require('jest-localstorage-mock')
+window.localStorage = global.localStorage
 configure({ adapter: new Adapter() });
 
 it('renders without crashing', () => {
@@ -21,8 +23,6 @@ describe('App test', () => {
       expect(renderedApp.state('location')).toEqual(location)
       expect(renderedApp.state('cleanData')).toEqual(cleanData)
     })
-<<<<<<< HEAD
-=======
 
   })
 
@@ -35,14 +35,13 @@ describe('App test', () => {
   describe('App UI test', () => {
     it('should render the home screen', () => {
       const renderedApp = shallow(<App />)
-      expect(renderedApp.find(Welcome).length).toEqual(1);
+      expect(renderedApp.find('Welcome').length).toEqual(1);
     })
 
-    it('should render the search the search functionality', () => {
+    it('should render the search functionality', () => {
       const renderedApp = mount(<App />)
-      expect(renderedApp.find(Search).length).toEqual(1);
+      expect(renderedApp.find("Search").length).toEqual(1);
     })
->>>>>>> master
 
   })
 })
