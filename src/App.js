@@ -22,19 +22,30 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getWeather(this.state.location)
+    if(localStorage.length >= 1) {
+      this.getFromStorage()
+    }
   }
 
   getWeather(location) {
-  let searchWord = location.split(',')
-   weatherData(searchWord)
-      .then(data => {
-        console.log(data)
-        this.setState({
-         cleanData: cleanData(data)
+    let searchWord = location.split(',')
+     weatherData(searchWord)
+        .then(data => {
+          this.sendToStorage(searchWord)
+          this.setState({
+           cleanData: cleanData(data),
+          })
         })
-      })
-      .catch(err => 'Location not found')
+        .catch(err => 'Location not found')
+  }
+
+  sendToStorage(city) {
+    localStorage.setItem('city', city)
+  }
+
+  getFromStorage() {
+      const getLocation = localStorage.getItem('city')
+      this.getWeather(getLocation)
   }
 
   render() {
@@ -44,24 +55,23 @@ class App extends Component {
          <div className="main-search">
           <Header />
           <Welcome location = {this.state.location}
-              getWeather ={this.getWeather}/>
-        </div>
+                   getWeather ={this.getWeather}/>
+         </div>
         }
         {this.state.cleanData &&
           <div className='main-wrapper'>
-          <div className="main-search">
-            <Header />
-            <Search getWeather = {this.getWeather}/>
+            <div className="main-search">
+              <Header />
+              <Search getWeather = {this.getWeather}/>
             </div>
 
-          <div className='weather-data'>
-          <div className='curr-hour-data'>
-            <CurrentWeather cleanData = {this.state.cleanData}/>
-            <SevenHour cleanData = {this.state.cleanData}/>
-          </div>
-            <TenDay cleanData = {this.state.cleanData}/>
-          </div>
-
+            <div className='weather-data'>
+              <div className='curr-hour-data'>
+                <CurrentWeather cleanData = {this.state.cleanData}/>
+                <SevenHour cleanData = {this.state.cleanData}/>
+              </div>
+              <TenDay cleanData = {this.state.cleanData}/>
+            </div>
         </div>
          }
       </div>
