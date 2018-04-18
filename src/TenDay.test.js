@@ -14,17 +14,17 @@ describe('TenDay test', () => {
     })
     it('should return correct number of cards', () => {
         const output = shallow(<TenDay cleanData={cleanData(mockData)}/>)
-        expect(output.find('.day-date').length).toEqual(10)
+        expect(output.find('Card').length).toEqual(10)
       })
     
       it('should have a class for the date for each card', () => {
         const output = shallow(<TenDay cleanData={cleanData(mockData)}/>)
-        expect(output.find('h4.day-date').length).toEqual(10)
+        expect(output.find('Card').length).toEqual(10)
       })
     
       it('should have a class for the hour temp for each card', () => {
         const output = shallow(<TenDay cleanData={cleanData(mockData)}/>)
-        expect(output.find('h4.day-temp').length).toEqual(10)
+        expect(output.find('Card').length).toEqual(10)
       })
     })
     
