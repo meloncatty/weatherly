@@ -1,6 +1,6 @@
 import React from 'react'
+import Card from './Card'
 import './styles/SevenHour.css'
-import Card from './Card.js'
 
 export default function SevenHour(props) {
   return (
@@ -11,7 +11,7 @@ export default function SevenHour(props) {
           hours={ object.hours}
           image={ object.images }
           temp={object.temps}/>
-
+        
       })
     }
     </div>
