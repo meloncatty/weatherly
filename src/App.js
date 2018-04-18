@@ -36,7 +36,7 @@ class App extends Component {
            cleanData: cleanData(data),
           })
         })
-        .catch(err => 'Location not found')
+        .catch(err => alert('Location not found'))
   }
 
   sendToStorage(city) {
