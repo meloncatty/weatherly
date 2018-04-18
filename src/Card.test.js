@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, configure, mount } from 'enzyme';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { shallow, configure } from 'enzyme'
 import App from './App'
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from 'enzyme-adapter-react-16'
 import Card from './Card'
 import Data from './helpers/mockData'
-import cleanData from './helpers/cleanData';
+import cleanData from './helpers/cleanData'
 
-configure({ adapter: new Adapter() });
+configure({ adapter: new Adapter() })
 
 describe('Card test', () => {
     it('should exist', () => {
